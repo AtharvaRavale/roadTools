@@ -1,0 +1,226 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Carousel -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'images/carousel-road1.jpg' %}" class="d-block w-100">
+            <div class="carousel-caption">
+                <h2 class="display-4 fw-bold">Leading Road Safety Solutions</h2>
+                <p class="lead">Protecting lives with state-of-the-art safety equipment</p>
+                <a href="{% url 'products' %}" class="btn btn-primary btn-lg">Explore Products</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/carousel-road2.jpg' %}" class="d-block w-100" alt="Traffic Equipment">
+            <div class="carousel-caption">
+                <h2 class="display-4 fw-bold">Traffic Management Excellence</h2>
+                <p class="lead">Comprehensive solutions for traffic control and safety</p>
+                <a href="{% url 'products' %}" class="btn btn-primary btn-lg">Explore Products</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/carousel-road3.jpg' %}" class="d-block w-100" alt="Construction Safety">
+            <div class="carousel-caption">
+                <h2 class="display-4 fw-bold">Construction Site Safety</h2>
+                <p class="lead">Ensuring worker safety with quality equipment</p>
+                <a href="{% url 'products' %}" class="btn btn-primary btn-lg">Explore Products</a>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+<!-- Key Features Section -->
+<div class="container my-5">
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="feature-card text-center p-4">
+                <i class="fas fa-shield-alt feature-icon mb-3"></i>
+                <h3>Premium Quality</h3>
+                <p>All our products meet international safety standards and regulations for maximum protection.</p>
+            </div>
+        </div>
+        <!-- <div class="col-md-4">
+            <div class="feature-card text-center p-4">
+                <i class="fas fa-truck feature-icon mb-3"></i>
+                <h3>Fast Delivery</h3>
+                <p>Quick shipping nationwide with expert installation services available.</p>
+            </div>
+        </div> -->
+        <div class="col-md-4">
+            <div class="feature-card text-center p-4">
+                <i class="fas fa-truck feature-icon mb-3"></i>
+                
+                <h3>Products in Wide Range</h3>
+                <p>Explore Our Extensive Range of Products for Every Need and Preference</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-card text-center p-4">
+                <i class="fas fa-headset feature-icon mb-3"></i>
+                <h3>24/7 Support</h3>
+                <p>Round-the-clock customer service to assist you with any queries or concerns.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Product Categories -->
+<div class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Product Categories</h2>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="category-card">
+                    <img src="{% static 'images/category-index-1.jpg' %}" class="card-img-top" alt="Traffic Signs">
+                    <div class="card-body text-center">
+                        <h4>Safety Helmets</h4>
+                        <p>Regulatory, warning, and informative signs</p>
+                        <a href="{% url 'products' %}" class="btn btn-outline-primary">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="category-card">
+                    <img src="{% static 'images/category-index-2.jpg' %}" class="card-img-top" alt="Safety Barriers">
+                    <div class="card-body text-center">
+                        <h4>Safety Jackets</h4>
+                        <p>Concrete and plastic barriers for road safety</p>
+                        <a href="{% url 'products' %}" class="btn btn-outline-primary">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="category-card">
+                    <img src="{% static 'images/category-index-3.jpg' %}" class="card-img-top" alt="Safety Shoes">
+                    <div class="card-body text-center">
+                        <h4>Safety Shoes</h4>
+                        <p>Reflective gear and visibility solutions</p>
+                        <a href="{% url 'products' %}" class="btn btn-outline-primary">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="category-card">
+                    <img src="{% static 'images/category-index-4.jpg' %}" class="card-img-top" alt="Safety Googles">
+                    <div class="card-body text-center">
+                        <h4>Safety Goggles</h4>
+                        <p>Modern traffic signal systems</p>
+                        <a href="{% url 'products' %}" class="btn btn-outline-primary">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Call to Action -->
+<div class="cta-section text-center py-5">
+    <div class="container">
+        <h2 class="mb-4">Need Expert Advice?</h2>
+        <p class="lead mb-4">Our team of safety specialists is here to help you choose the right equipment for your needs.</p>
+        <a href="{% url 'contact' %}" class="btn btn-primary btn-lg">Contact Us Today</a>
+    </div>
+</div>
+
+<style>
+    /* Hero Carousel Styles */
+    .carousel-item {
+        height: 600px;
+        position: relative;
+    }
+    
+    .carousel-item img {
+        object-fit: cover;
+        height: 100%;
+    }
+    
+    .carousel-caption {
+        background: rgba(0, 0, 0, 0.5);
+        padding: 2rem;
+        border-radius: 10px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    /* Feature Cards */
+    .feature-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .feature-card:hover {
+        transform: translateY(-10px);
+    }
+    
+    .feature-icon {
+        font-size: 3rem;
+        color: var(--primary-color);
+    }
+    
+    /* Category Cards */
+    .category-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .category-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .category-card img {
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    /* CTA Section */
+    .cta-section {
+        background: linear-gradient(135deg, var(--primary-color), #34495E);
+        color: white;
+    }
+    
+    .btn-primary {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+        padding: 0.8rem 2rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+        background-color: #c0392b;
+        border-color: #c0392b;
+        transform: translateY(-2px);
+    }
+    
+    .btn-outline-primary {
+        color: var(--primary-color);
+        border-color: var(--primary-color);
+        transition: all 0.3s ease;
+    }
+    
+    .btn-outline-primary:hover {
+        background-color: var(--primary-color);
+        color: white;
+        transform: translateY(-2px);
+    }
+</style>
+{% endblock %}

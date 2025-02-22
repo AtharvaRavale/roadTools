@@ -1,0 +1,221 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .about-hero {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        padding: 4rem 0;
+        color: white;
+        border-radius: 15px;
+        margin-bottom: 4rem;
+    }
+    
+    .about-card {
+        background: white;
+        border-radius: 12px;
+        padding: 2rem;
+        height: 100%;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .about-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .stat-card {
+        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        border-radius: 12px;
+        padding: 2rem;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    
+    .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    
+    .team-member {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .team-member img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+        border: 4px solid var(--primary-color);
+        padding: 4px;
+    }
+    
+    .timeline {
+        position: relative;
+        padding: 2rem 0;
+    }
+    
+    .timeline-item {
+        padding: 2rem;
+        background: white;
+        border-radius: 12px;
+        margin-bottom: 2rem;
+        position: relative;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: -8px;
+        top: 50%;
+        width: 16px;
+        height: 16px;
+        background: var(--primary-color);
+        border-radius: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .value-icon {
+        width: 60px;
+        height: 60px;
+        background: var(--primary-color);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        color: white;
+        font-size: 1.5rem;
+    }
+</style>
+
+<div class="container">
+    <!-- Hero Section -->
+    <div class="about-hero text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4 animate__animated animate__fadeIn">About TNS Enterprises</h1>
+            <p class="lead mb-0">Leading the way in road safety innovation since 2010</p>
+        </div>
+    </div>
+
+    <!-- Mission & Vision -->
+    <div class="row g-4 mb-5">
+        <div class="col-md-6">
+            <div class="about-card">
+                <div class="value-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h2 class="h3 text-center mb-4">Our Mission</h2>
+                <p class="text-muted">To enhance road safety through innovative solutions and quality equipment, making every journey safer for everyone. We strive to be at the forefront of safety technology while maintaining the highest standards of quality and service.</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="about-card">
+                <div class="value-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h2 class="h3 text-center mb-4">Our Vision</h2>
+                <p class="text-muted">To become the global leader in road safety solutions, creating a world where accidents are prevented through superior safety equipment and innovative technologies. We envision safer roads for future generations.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="row g-4 mb-5">
+        <div class="col-md-3">
+            <div class="stat-card">
+                <i class="fas fa-users fa-2x text-primary mb-3"></i>
+                <h3 class="h2 fw-bold">15+</h3>
+                <p class="text-muted mb-0">Years Experience</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat-card">
+                <i class="fas fa-project-diagram fa-2x text-primary mb-3"></i>
+                <h3 class="h2 fw-bold">1000+</h3>
+                <p class="text-muted mb-0">Projects Completed</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat-card">
+                <i class="fas fa-smile-beam fa-2x text-primary mb-3"></i>
+                <h3 class="h2 fw-bold">500+</h3>
+                <p class="text-muted mb-0">Happy Clients</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat-card">
+                <i class="fas fa-globe fa-2x text-primary mb-3"></i>
+                <h3 class="h2 fw-bold">20+</h3>
+                <p class="text-muted mb-0">Cities Served</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Values -->
+    <div class="mb-5">
+        <h2 class="text-center mb-4">Our Core Values</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="about-card text-center">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="h4">Safety First</h3>
+                    <p class="text-muted">We prioritize safety in every product and service we offer, ensuring the highest standards of protection.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="about-card text-center">
+                    <div class="value-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="h4">Quality Excellence</h3>
+                    <p class="text-muted">We maintain rigorous quality standards in all our products and services to exceed customer expectations.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="about-card text-center">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="h4">Customer Focus</h3>
+                    <p class="text-muted">We put our customers first, providing personalized solutions and exceptional service.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Company Timeline -->
+    <div class="mb-5">
+        <h2 class="text-center mb-4">Our Journey</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3 class="h5 mb-2">2010 - Company Founded</h3>
+                <p class="text-muted mb-0">Started with a vision to improve road safety in India.</p>
+            </div>
+            <div class="timeline-item">
+                <h3 class="h5 mb-2">2015 - National Expansion</h3>
+                <p class="text-muted mb-0">Expanded operations to major cities across India.</p>
+            </div>
+            <div class="timeline-item">
+                <h3 class="h5 mb-2">2018 - ISO Certification</h3>
+                <p class="text-muted mb-0">Achieved ISO 9001:2015 certification for quality management.</p>
+            </div>
+            <div class="timeline-item">
+                <h3 class="h5 mb-2">2023 - Innovation Center</h3>
+                <p class="text-muted mb-0">Launched state-of-the-art innovation center for safety equipment research.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="text-center py-5">
+        <h2 class="mb-4">Ready to Work with Us?</h2>
+        <p class="lead text-muted mb-4">Join us in making roads safer for everyone</p>
+        <a href="{% url 'contact' %}" class="btn btn-primary btn-lg">Contact Us Today</a>
+    </div>
+</div>
+{% endblock %}
